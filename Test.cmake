@@ -49,7 +49,7 @@ function(QC_ADD_TEST)
 
     add_executable(tst_${_testname} ${_sources})
     if(NOT ARG_GUI)
-        evm_mark_nongui_executable(tst_${_testname})
+        qc_mark_nongui_executable(tst_${_testname})
     endif()
 
     add_test(NAME ${_testname} COMMAND tst_${_testname} -tickcounter)
